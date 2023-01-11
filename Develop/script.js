@@ -14,19 +14,19 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword() {
   var correctPrompt = getPrompts();
+  var passwordText = document.querySelector("#password");
  
   if (correctPrompt) {
     var genPassword = generatePassword();
-    var passwordText = document.querySelector("#password");
     passwordText.value = genPassword;
     } else {
-
+      passwordTest.value = "";
     }
  }
   
 function generatePassword() {
   var password = "";
-  for (var i = 0; i <= characterLength; i++) {
+  for (var i = 0; i < characterLength; i++) {
     var randomLetter = Math.floor(Math.random() * choiceArr.length);
     password = password + choiceArr[randomIndex];
   }
