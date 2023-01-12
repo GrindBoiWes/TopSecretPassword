@@ -1,4 +1,4 @@
-// Assignment Code
+// Variables for randomized password. The generator will use these as selected in the prompts given //
 var characterLength = 8;
 var choiceArr = [];
 var specialCharacter = ['!', '@', '#', "$", '%', "^", "&", '*', "/", "<" , ">"];
@@ -7,33 +7,39 @@ var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 var number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword() {
 
-}
+generateBtn.addEventListener("click", writePassword);
 
-// Write password to the #password input
+// This section generates the password itself // 
+
 function writePassword() {
-  var correctPrompt = getPrompts();
+  var truePrompt = getPrompts();
   var passwordText = document.querySelector("#password");
- 
-  if (correctPrompt) {
+  
+  if (truePrompt) {
     var genPassword = generatePassword();
     passwordText.value = genPassword;
     } else {
-      passwordTest.value = "";
+      passwordText.value = "";
     }
  }
-  
+//  This section will generate a loop for randomizing the password based on answered prompts  //
 function generatePassword() {
   var password = "";
   for (var i = 0; i < characterLength; i++) {
-    var randomLetter = Math.floor(Math.random() * choiceArr.length);
+    var randomIndex = Math.floor(Math.random() * choiceArr.length);
     password = password + choiceArr[randomIndex];
   }
   return password;
 }
 
+// This section will give prompts for each question about how you would like your password to be finalized.
+// You can mix and match which one's you would like, for instance no lowercase or symbols only uppercase and numbers. If entering "five", you will get hit with an error to resubmit your number //
+
 function getPrompts() {
+
+  choiceArr = [];
+
   characterLength = parseInt(prompt("How many characters would you like your password to be? (8 - 128 characters"));
   
   if(isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
@@ -49,7 +55,7 @@ function getPrompts() {
   if (confirm("Would you like to have special characters in your secure password?")) {
     choiceArr = choiceArr.concat(specialCharacter);
   }
-  if (confirm("Would you like to numbers in your secure password?")) {
+  if (confirm("Would you like numbers in your secure password?")) {
     choiceArr = choiceArr.concat(number);
   }
   return true;
@@ -60,16 +66,4 @@ function getPrompts() {
 generateBtn.addEventListener("click", writePassword);
 
 
-  /// To Do List
-  // 1) When I click the button to generate password..
-  // 2) Then I am presented with a series of prompts for password criteria
-  // 3) Then I select which criteria to include in password
-  // 4) Then prompted for length of password (8-128)
-  // 5) Then asked for character types
-  // 6) Confirm wether to include lowercase, uppercase, numeric, and/or special characters
-  // 7) Answer each prompt
-  // 8) Then my input should be validated and at least one character type should be selected
-  // 9) All prompts are answered
-  // 10) Then a password is generated that matches selected criteria
-  // 11) Password is generated
-  // 12) Password is either displayed in an alert or writter to the page
+  
