@@ -18,7 +18,7 @@ That all being said, there are a a few variations you can choose between. With t
 <img src = "./Assets/images/passwordgen-2.png">
 <img src = "./Assets/images/passwordgen-3.png">
 <img src = "./Assets/images/passwordgen-4.png">
-<img src = "./Assets/iimages/passwordgen-5.png">
+<img src = "./Assets/images/passwordgen-5.png">
 <img src = "./Assets/images/passwordgen-6.png">
 
 
