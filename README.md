@@ -15,11 +15,11 @@ That all being said, there are a a few variations you can choose between. With t
 # Screenshot
 
 <img src = "/assets/images/passwordgen-1.png">
-<img src = "assets/images/passwordgen-2.png">
-<img src = "assets/images/passwordgen-3.png">
-<img src = "assets/images/passwordgen-4.png">
-<img src = "assets/iimages/passwordgen-5.png">
-<img src = "assets/images/passwordgen-6.png">
+<img src = "/assets/images/passwordgen-2.png">
+<img src = "/assets/images/passwordgen-3.png">
+<img src = "/assets/images/passwordgen-4.png">
+<img src = "/assets/iimages/passwordgen-5.png">
+<img src = "/assets/images/passwordgen-6.png">
 
 
 # Links
